@@ -17,6 +17,13 @@ jobs:
       - name: Install Theos
         run: git clone --recursive --depth 1 https://github.com/theos/theos.git "$HOME/theos"
 
+      # Xcode's SDK has no private frameworks (Preferences), so use Theos' patched SDK
+      # while still compiling with Xcode's clang for the current arm64e ABI.
+      - name: Install patched SDK
+        run: |
+          git clone --depth 1 https://github.com/theos/sdks.git "$RUNNER_TEMP/sdks"
+          cp -R "$RUNNER_TEMP/sdks/iPhoneOS16.5.sdk" "$HOME/theos/sdks/"
+
       - name: Build rootless package
         run: |
           export THEOS="$HOME/theos"
