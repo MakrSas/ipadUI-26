@@ -67,7 +67,10 @@ NSArray<NSString *> *PUStockApps(void) {
 	NSArray *colors = dark
 		? @[[UIColor colorWithRed:0.05 green:0.10 blue:0.30 alpha:1], [UIColor colorWithRed:0.28 green:0.08 blue:0.40 alpha:1], [UIColor colorWithRed:0.55 green:0.20 blue:0.18 alpha:1]]
 		: @[[UIColor colorWithRed:0.35 green:0.62 blue:1.00 alpha:1], [UIColor colorWithRed:0.70 green:0.52 blue:0.98 alpha:1], [UIColor colorWithRed:1.00 green:0.70 blue:0.55 alpha:1]];
-	((CAGradientLayer *)self.layer).colors = [colors valueForKey:@"CGColor"];
+	// Not via KVC: UIColor stopped answering valueForKey:@"CGColor" on iOS 26.
+	NSMutableArray *cgColors = [NSMutableArray array];
+	for (UIColor *color in colors) [cgColors addObject:(__bridge id)color.CGColor];
+	((CAGradientLayer *)self.layer).colors = cgColors;
 }
 
 - (void)traitCollectionDidChange:(UITraitCollection *)previous {
@@ -417,7 +420,7 @@ static const NSUInteger PUDockRecentsCount = 3;
 	SEL sel = NSSelectorFromString(@"applicationProxyForIdentifier:");
 	if ([proxyClass respondsToSelector:sel]) {
 		id proxy = ((id (*)(Class, SEL, NSString *))objc_msgSend)(proxyClass, sel, bundleID);
-		NSString *name = [proxy respondsToSelector:@selector(localizedName)] ? [proxy valueForKey:@"localizedName"] : nil;
+		NSString *name = [proxy respondsToSelector:@selector(localizedName)] ? ((NSString *(*)(id, SEL))objc_msgSend)(proxy, @selector(localizedName)) : nil;
 		if (name.length) return name;
 	}
 	return bundleID.pathExtension;

@@ -152,7 +152,13 @@ static void PULayoutScreen(UIView *screen, CGRect frame) {
 - (void)layoutSubviews {
 	[super layoutSubviews];
 	_stage.frame = CGRectInset(self.bounds, 16, 10);
-	[self layoutStage:_stage.bounds];
+	// A preview must never take the settings down: log the failure and leave it empty.
+	@try {
+		[self layoutStage:_stage.bounds];
+	} @catch (NSException *exception) {
+		NSLog(@"[iPadUI26] preview %@ failed: %@", self.class, exception);
+		for (UIView *view in _stage.subviews) view.hidden = YES;
+	}
 }
 
 - (void)layoutStage:(CGRect)bounds {
