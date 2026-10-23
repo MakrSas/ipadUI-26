@@ -2,4 +2,4 @@
 "Device Class" = "Класс устройства";
 "SpringBoard is told through MobileGestalt that it runs on an iPad. Required for most iPad features; turn off only for troubleshooting." = "Через MobileGestalt SpringBoard сообщается, что устройство — iPad. Нужно для большинства функций iPad; выключайте только для диагностики.";
 "Report Device as iPad" = "Представляться iPad";
-"Hooks that do not exist on the installed iOS version are skipped and logged with the [iPadUI26] prefix in Console." = "Хуки, которых нет в установленной версии iOS, пропускаются и пишутся в Консоль с префиксом [iPadUI26].";
+"Hooks that do not exist on the installed iOS version are skipped and written to the log: Settings, iPadUI 26, Log." = "Хуки, которых нет в установленной версии iOS, пропускаются и записываются в журнал: Настройки → iPadUI 26 → Журнал.";

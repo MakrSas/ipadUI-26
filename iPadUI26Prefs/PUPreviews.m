@@ -1,6 +1,7 @@
 #import "PUPreviews.h"
 #import "PUPreviewKit.h"
 #import "../Sources/PUPrefs.h"
+#import "../Sources/PULog.h"
 
 #define PULocalized(key) [[NSBundle bundleForClass:PUPreviewView.class] localizedStringForKey:key value:key table:@"Previews"]
 
@@ -156,7 +157,7 @@ static void PULayoutScreen(UIView *screen, CGRect frame) {
 	@try {
 		[self layoutStage:_stage.bounds];
 	} @catch (NSException *exception) {
-		NSLog(@"[iPadUI26] preview %@ failed: %@", self.class, exception);
+		PULog(@"preview %@ failed: %@", self.class, exception);
 		for (UIView *view in _stage.subviews) view.hidden = YES;
 	}
 }

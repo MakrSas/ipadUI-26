@@ -15,5 +15,3 @@ BOOL PUHookReturnInteger(const char *className, const char *selName, BOOL classM
 
 // Forces an exported C function returning BOOL to return `value`.
 BOOL PUHookFunctionReturnBool(const char *imagePath, const char *symbol, BOOL value);
-
-void PULog(NSString *format, ...) NS_FORMAT_FUNCTION(1, 2);

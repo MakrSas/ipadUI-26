@@ -1,15 +1,8 @@
 #import "PUHook.h"
+#import "PULog.h"
 #import <objc/runtime.h>
 #import <dlfcn.h>
 #import <substrate.h>
-
-void PULog(NSString *format, ...) {
-	va_list args;
-	va_start(args, format);
-	NSString *message = [[NSString alloc] initWithFormat:format arguments:args];
-	va_end(args);
-	NSLog(@"[iPadUI26] %@", message);
-}
 
 static Method PUFindMethod(const char *className, const char *selName, BOOL classMethod, Class *outClass) {
 	Class cls = objc_getClass(className);

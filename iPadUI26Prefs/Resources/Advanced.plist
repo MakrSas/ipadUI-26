@@ -28,7 +28,7 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>footerText</key>
-			<string>Hooks that do not exist on the installed iOS version are skipped and logged with the [iPadUI26] prefix in Console.</string>
+			<string>Hooks that do not exist on the installed iOS version are skipped and written to the log: Settings, iPadUI 26, Log.</string>
 		</dict>
 	</array>
 	<key>title</key>

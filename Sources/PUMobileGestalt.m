@@ -3,6 +3,7 @@
 #import <substrate.h>
 #import <ptrauth.h>
 #import "PUHook.h"
+#import "PULog.h"
 #import "PUPrefs.h"
 
 // MobileGestalt answers that make SpringBoard believe it runs on an iPad. Callers use

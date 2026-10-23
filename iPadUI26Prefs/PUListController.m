@@ -3,6 +3,7 @@
 #import <rootless.h>
 #import <spawn.h>
 #import "../Sources/PUPrefs.h"
+#import "PULogViewController.h"
 
 // Settings-style row icon: an SF Symbol on a rounded, coloured square, drawn on device.
 static UIImage *PUSettingsIcon(NSString *symbol, UIColor *color) {
@@ -93,6 +94,10 @@ static UIColor *PUColorNamed(NSString *name) {
 	} else {
 		PUSpawn(@[ROOT_PATH_NS(@"/usr/bin/killall"), @"-9", @"SpringBoard"]);
 	}
+}
+
+- (void)showLog:(PSSpecifier *)specifier {
+	[self.navigationController pushViewController:[PULogViewController new] animated:YES];
 }
 
 - (void)resetSettings:(PSSpecifier *)specifier {

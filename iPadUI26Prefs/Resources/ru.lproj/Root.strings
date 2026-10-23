@@ -9,8 +9,10 @@
 "Apps" = "Приложения";
 "System" = "Система";
 "Advanced" = "Дополнительно";
+"Log" = "Журнал";
 "Most changes are applied after a respring." = "Большинство изменений применяется после респринга.";
 "Respring" = "Респринг";
 "Reset All Settings" = "Сбросить все настройки";
+"The log is empty. Respring and open this page again." = "Журнал пуст. Сделайте респринг и откройте эту страницу снова.";
 "Cancel" = "Отмена";
 "Changes are applied after SpringBoard restarts." = "Изменения применятся после перезапуска SpringBoard.";

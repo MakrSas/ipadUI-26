@@ -5,7 +5,7 @@ include $(THEOS)/makefiles/common.mk
 
 BUNDLE_NAME = iPadUI26Prefs
 
-iPadUI26Prefs_FILES = $(wildcard *.m) ../Sources/PUPrefs.m
+iPadUI26Prefs_FILES = $(wildcard *.m) ../Sources/PUPrefs.m ../Sources/PULog.m
 iPadUI26Prefs_FRAMEWORKS = UIKit
 iPadUI26Prefs_PRIVATE_FRAMEWORKS = Preferences
 iPadUI26Prefs_INSTALL_PATH = /Library/PreferenceBundles

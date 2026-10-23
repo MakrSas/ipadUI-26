@@ -1,5 +1,6 @@
 #import <Foundation/Foundation.h>
 #import "PUHook.h"
+#import "PULog.h"
 #import "PUPrefs.h"
 
 void PUInitMobileGestalt(void);
@@ -26,6 +27,7 @@ __attribute__((constructor)) static void PUInit(void) {
 		// Only real apps: daemons and extensions also link UIKit but must stay untouched.
 		BOOL isApp = [executable containsString:@".app/"] && ![executable containsString:@".appex/"];
 		if (!isApp || !bundleID || PUIsAppExcluded(bundleID)) return;
+		PULog(@"loading into %@", bundleID);
 		if (PUPrefBool(PUKeyPadStatusBar)) PUInitStatusBar();
 		if (PUPrefBool(PUKeyAppsIdiom)) PUInitAppIdiom();
 	}

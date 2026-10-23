@@ -145,6 +145,18 @@
 			<string>gearshape.2.fill</string>
 		</dict>
 		<dict>
+			<key>action</key>
+			<string>showLog:</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Log</string>
+			<key>pu_color</key>
+			<string>teal</string>
+			<key>pu_symbol</key>
+			<string>doc.text.magnifyingglass</string>
+		</dict>
+		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>footerText</key>
