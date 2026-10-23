@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSStaticTextCell</string>
+			<key>cellClass</key>
+			<string>PUPreviewCell</string>
+			<key>height</key>
+			<integer>230</integer>
+			<key>pu_preview</key>
+			<string>multitasking</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Drag an app from the dock onto the screen to open two apps side by side or a floating Slide Over window. Drag the divider to resize.</string>
+			<key>label</key>
+			<string>Split View &amp; Slide Over</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.makrsas.ipadui26</string>
+			<key>key</key>
+			<string>Multitasking</string>
+			<key>label</key>
+			<string>Split View &amp; Slide Over</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSStaticTextCell</string>
+			<key>cellClass</key>
+			<string>PUPreviewCell</string>
+			<key>height</key>
+			<integer>230</integer>
+			<key>pu_preview</key>
+			<string>stagemanager</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Resizable overlapping windows with recent apps on the side. Experimental on iPhone: it is very demanding on memory and may be unstable.</string>
+			<key>label</key>
+			<string>Stage Manager</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.makrsas.ipadui26</string>
+			<key>key</key>
+			<string>StageManager</string>
+			<key>label</key>
+			<string>Stage Manager</string>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>Multitasking</string>
+</dict>
+</plist>

@@ -1,0 +1,16 @@
+"iPadUI 26" = "iPadUI 26";
+"Master switch. When off, the tweak does not load into any process." = "Главный выключатель. Когда он выключен, твик не загружается ни в один процесс.";
+"Enable iPadUI 26" = "Включить iPadUI 26";
+"Interface" = "Интерфейс";
+"Home Screen & Status Bar" = "Домашний экран и статус-бар";
+"Dock" = "Док";
+"App Switcher" = "Переключатель приложений";
+"Multitasking" = "Многозадачность";
+"Apps" = "Приложения";
+"System" = "Система";
+"Advanced" = "Дополнительно";
+"Most changes are applied after a respring." = "Большинство изменений применяется после респринга.";
+"Respring" = "Респринг";
+"Reset All Settings" = "Сбросить все настройки";
+"Cancel" = "Отмена";
+"Changes are applied after SpringBoard restarts." = "Изменения применятся после перезапуска SpringBoard.";

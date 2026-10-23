@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSStaticTextCell</string>
+			<key>cellClass</key>
+			<string>PUPreviewCell</string>
+			<key>height</key>
+			<integer>230</integer>
+			<key>pu_preview</key>
+			<string>apps</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Apps report the iPad idiom and use their iPad layouts: sidebars, split views, popovers and the iPad keyboard. Works best in landscape.</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.makrsas.ipadui26</string>
+			<key>key</key>
+			<string>AppsIdiom</string>
+			<key>label</key>
+			<string>iPad Layout in Apps</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Comma-separated bundle identifiers that always keep the iPhone interface.</string>
+			<key>label</key>
+			<string>Excluded Apps</string>
+		</dict>
+		<dict>
+			<key>autoCaps</key>
+			<string>none</string>
+			<key>cell</key>
+			<string>PSEditTextCell</string>
+			<key>default</key>
+			<string>com.apple.AppStore, com.apple.camera, com.apple.mobilephone</string>
+			<key>defaults</key>
+			<string>com.makrsas.ipadui26</string>
+			<key>key</key>
+			<string>AppsExcluded</string>
+			<key>noAutoCorrect</key>
+			<true/>
+			<key>placeholder</key>
+			<string>com.example.app</string>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>Apps</string>
+</dict>
+</plist>

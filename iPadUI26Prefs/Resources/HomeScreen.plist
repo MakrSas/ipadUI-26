@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSStaticTextCell</string>
+			<key>cellClass</key>
+			<string>PUPreviewCell</string>
+			<key>height</key>
+			<integer>340</integer>
+			<key>pu_preview</key>
+			<string>home</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Denser iPad icon grid with widgets, iPad Control Center, Notification Center and Lock Screen layouts. SpringBoard reports the iPad interface idiom.</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.makrsas.ipadui26</string>
+			<key>key</key>
+			<string>SpringBoardIdiom</string>
+			<key>label</key>
+			<string>iPad Home Screen</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSStaticTextCell</string>
+			<key>cellClass</key>
+			<string>PUPreviewCell</string>
+			<key>height</key>
+			<integer>170</integer>
+			<key>pu_preview</key>
+			<string>statusbar</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Time and date on the left, Wi-Fi and battery percentage on the right, as on iPad. Applies to SpringBoard and apps.</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.makrsas.ipadui26</string>
+			<key>key</key>
+			<string>PadStatusBar</string>
+			<key>label</key>
+			<string>iPad Status Bar</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSStaticTextCell</string>
+			<key>cellClass</key>
+			<string>PUPreviewCell</string>
+			<key>height</key>
+			<integer>260</integer>
+			<key>pu_preview</key>
+			<string>rotation</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Lets the Home Screen and Lock Screen follow the device into landscape.</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.makrsas.ipadui26</string>
+			<key>key</key>
+			<string>HomeRotation</string>
+			<key>label</key>
+			<string>Home Screen Rotation</string>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>Home Screen &amp; Status Bar</string>
+</dict>
+</plist>

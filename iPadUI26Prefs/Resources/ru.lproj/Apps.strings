@@ -1,0 +1,5 @@
+"Apps" = "Приложения";
+"Apps report the iPad idiom and use their iPad layouts: sidebars, split views, popovers and the iPad keyboard. Works best in landscape." = "Приложения считают себя запущенными на iPad и используют iPad-раскладку: боковые панели, разделённые экраны, поповеры и клавиатуру iPad. Лучше всего выглядит в альбомной ориентации.";
+"iPad Layout in Apps" = "Раскладка iPad в приложениях";
+"Excluded Apps" = "Исключённые приложения";
+"Comma-separated bundle identifiers that always keep the iPhone interface." = "Идентификаторы приложений (bundle ID) через запятую, которые всегда остаются с интерфейсом iPhone.";

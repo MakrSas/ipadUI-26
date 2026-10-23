@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSStaticTextCell</string>
+			<key>cellClass</key>
+			<string>PUPreviewCell</string>
+			<key>height</key>
+			<integer>150</integer>
+			<key>pu_preview</key>
+			<string>dock</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>The iPad floating dock: more apps, can be pulled up over any app with a short swipe from the bottom edge.</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.makrsas.ipadui26</string>
+			<key>key</key>
+			<string>FloatingDock</string>
+			<key>label</key>
+			<string>Floating Dock</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Recent and suggested apps appear after the divider. App Library adds a tile that opens App Library from the dock.</string>
+			<key>label</key>
+			<string>Floating Dock</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.makrsas.ipadui26</string>
+			<key>key</key>
+			<string>DockRecents</string>
+			<key>label</key>
+			<string>Show Suggested and Recent Apps</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.makrsas.ipadui26</string>
+			<key>key</key>
+			<string>DockAppLibrary</string>
+			<key>label</key>
+			<string>Show App Library in Dock</string>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>Dock</string>
+</dict>
+</plist>
