@@ -1,6 +1,7 @@
 #import "PUListController.h"
 #import <Preferences/PSSpecifier.h>
-#import <objc/message.h>
+#import <rootless.h>
+#import <spawn.h>
 #import "../Sources/PUPrefs.h"
 
 // Settings-style row icon: an SF Symbol on a rounded, coloured square, drawn on device.
@@ -16,6 +17,14 @@ static UIImage *PUSettingsIcon(NSString *symbol, UIColor *color) {
 		CGSize imageSize = image.size;
 		[image drawInRect:CGRectMake((size.width - imageSize.width) / 2, (size.height - imageSize.height) / 2, imageSize.width, imageSize.height)];
 	}];
+}
+
+static void PUSpawn(NSArray<NSString *> *arguments) {
+	char *argv[arguments.count + 1];
+	for (NSUInteger i = 0; i < arguments.count; i++) argv[i] = (char *)arguments[i].fileSystemRepresentation;
+	argv[arguments.count] = NULL;
+	pid_t pid;
+	posix_spawn(&pid, argv[0], NULL, NULL, argv, NULL);
 }
 
 static UIColor *PUColorNamed(NSString *name) {
@@ -77,13 +86,13 @@ static UIColor *PUColorNamed(NSString *name) {
 }
 
 - (void)performRespring {
-	Class actionClass = NSClassFromString(@"SBSRelaunchAction");
-	Class serviceClass = NSClassFromString(@"FBSSystemService");
-	if (!actionClass || !serviceClass) return;
-	// Restarting the render server gives the same fade-to-black as a native respring.
-	id action = ((id (*)(Class, SEL, NSString *, NSUInteger, NSURL *))objc_msgSend)(actionClass, NSSelectorFromString(@"actionWithReason:options:targetURL:"), @"RestartRenderServer", 4, nil);
-	id service = ((id (*)(Class, SEL))objc_msgSend)(serviceClass, NSSelectorFromString(@"sharedService"));
-	((void (*)(id, SEL, NSSet *, id))objc_msgSend)(service, NSSelectorFromString(@"sendActions:withResult:"), [NSSet setWithObject:action], nil);
+	// sbreload restarts SpringBoard cleanly; killall is the fallback when it is missing.
+	NSString *sbreload = ROOT_PATH_NS(@"/usr/bin/sbreload");
+	if ([NSFileManager.defaultManager isExecutableFileAtPath:sbreload]) {
+		PUSpawn(@[sbreload]);
+	} else {
+		PUSpawn(@[ROOT_PATH_NS(@"/usr/bin/killall"), @"-9", @"SpringBoard"]);
+	}
 }
 
 - (void)resetSettings:(PSSpecifier *)specifier {

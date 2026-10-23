@@ -13,5 +13,5 @@ iPadUI26_FRAMEWORKS = UIKit Foundation
 
 include $(THEOS_MAKE_PATH)/tweak.mk
 
-SUBPROJECTS += iPadUI26Prefs
+SUBPROJECTS += iPadUI26Prefs iPadUI26App
 include $(THEOS_MAKE_PATH)/aggregate.mk

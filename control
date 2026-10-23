@@ -1,6 +1,6 @@
 Package: com.makrsas.ipadui26
 Name: iPadUI 26
-Version: 1.0.0
+Version: 1.0.1
 Architecture: iphoneos-arm64
 Description: Full iPad interface on iPhone: floating dock, grid app switcher, Split View / Slide Over, Stage Manager, iPad home screen, status bar and app layouts.
 Maintainer: MakrSas
